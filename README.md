@@ -1,75 +1,37 @@
-# React + TypeScript + Vite
+# PDF to 3D CAD Converter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A browser-based application for turning 2D PDF component drawings into simplified 3D models and combining them into an assembly.
 
-Currently, two official plugins are available:
+The initial focus is a guided workflow: users supply dimensions and identify shapes from drawings to create geometry, preview the result, and export an STL file.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Project Status
 
-## React Compiler
+Early development. Features below describe the planned MVP.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Planned Features
 
-## Expanding the ESLint configuration
+- Upload and view PDF drawings.
+- Define basic shapes using dimensions from the drawings.
+- Generate simplified 3D components.
+- Position components within an assembly.
+- Preview the assembly in an interactive 3D viewer.
+- Export the resulting geometry as an STL file.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Intended Workflow
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1. Upload a component drawing.
+2. Identify the shapes to model and enter their dimensions.
+3. Generate and inspect the 3D component.
+4. Repeat for additional components.
+5. Position the components to form an assembly.
+6. Export the model.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Initial Scope
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+The MVP will focus on basic geometry and user-assisted modeling without AI. Fully automatic reconstruction from arbitrary engineering drawings is outside the initial scope.
 
-```
+STL export will contain the model’s surface geometry. It will not preserve CAD features, assembly relationships, or drawing annotations.
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+## Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+Setup instructions will be added as the application takes shape.
