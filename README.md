@@ -34,4 +34,56 @@ STL export will contain the model’s surface geometry. It will not preserve CAD
 
 ## Getting Started
 
-Setup instructions will be added as the application takes shape.
+Follow these steps to set up the project locally and run the development tools.
+
+### Prerequisites
+
+Ensure you have **Node.js** (22.12+ or a newer compatible LTS release) and **npm** installed on your machine.
+
+### Setup Instructions
+
+1. **Clone the repository**
+
+   ```bash
+   git clone git@github.com:ebordenave/pdf-to-3d-cad-converter.git
+   cd pdf-to-3d-cad-converter
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+### Available Scripts
+
+Once the installation is complete, you can run the following commands in the project directory:
+
+- **Development Server**
+
+  ```bash
+  npm run dev
+  ```
+
+  Starts the local development server. Open [http://localhost:5173](http://localhost:5173) (or the port displayed in your terminal) to view it in your browser.
+
+- **Production Build**
+
+  ```bash
+  npm run build
+  ```
+
+  Builds the application for production usage. The optimized output will be generated in the dist directory.
+
+- **Linting**
+
+  ```bash
+  npm run lint
+  ```
+
+  Runs the linter to check the codebase for code quality, formatting issues, and potential errors.
+
+- **Testing**
+  ```bash
+  npm test
+  ```
+  Runs the automated unit tests using Vitest. Integration tests are planned for a future milestone.
